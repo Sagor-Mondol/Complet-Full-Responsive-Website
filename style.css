@@ -1,0 +1,486 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Akatab&family=Bebas+Neue&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Rancho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth !important;
+  }
+
+  body{
+    overflow-x: hidden;
+}
+
+:root{
+    --Fiver:#00AC2C;
+    --second-text:#F26522;
+    --red:#D21312;
+    --black:#111;
+    --gray:#666;
+    --text:#FFFFFF;
+    --shape:#2B2A29;
+    --new-text: #094b65;
+  } 
+
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+    color: var(--black) !important;
+   }
+
+   p{
+    color: var(--black);
+     font-family: 'Roboto', sans-serif;
+   }
+   
+   a{
+    color: var(--text);
+    /* font-family: 'Rancho', cursive; */
+     font-family: 'Roboto', sans-serif; 
+  }
+
+  span{
+    color: var(--second-text);
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+  span:hover{
+    color: var(--new-text);
+  }
+   
+
+ #btn{
+    padding: 15px 35px;
+    color: var(--text);
+    background-color: var(--new-text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5%;
+    
+  }
+
+   #btn:hover{
+    background-color: var(--text);
+    transition: 0.5s;
+    color: var(--new-text);
+  }
+
+  #btn-col{
+    padding: 15px 35px;
+    color: var(--text) !important;
+    background-color: var(--second-text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10%;
+  }
+
+
+  #btn-col:hover{
+    background-color: #094b65;
+    transition: 0.5s;
+    color: var(--text);
+  }
+
+/*--------------------
+     Header-Start
+----------------------*/
+#header{
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(rgba(4, 9, 30, 0.167),rgba(4, 9, 30, 0.299)), url(img/Bannar.jpg);  */
+    background-image: url(img/Bannar.jpg); 
+    background-position: center;
+    background-size: cover;   
+    /* background-attachment: fixed; */
+}
+
+/*-----product-page only requirement--------*/
+#header-product{
+  width: 100%;
+  height: 50vh;
+  /* background-image: linear-gradient(rgba(4, 9, 30, 0.167),rgba(4, 9, 30, 0.299)), url(img/Bannar.jpg);  */
+  background-image: url(img/discount-1.jpg); 
+  background-position: center;
+  background-size: cover;   
+ background-attachment: fixed; 
+}
+
+/*-----------------*/
+
+/*-----contact-page only requirement--------*/
+#contact-header{
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.167),rgba(4, 9, 30, 0.299)), url(img/contact.jpg); 
+  background-position: center;
+  background-size: cover;   
+  /* background-attachment: fixed; */
+}
+
+/*-----------------*/
+
+header .navbar{
+   
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-width: 1200px;
+   padding: 40px 150px;
+   margin: 0 auto;
+   animation: loadAnimation 2s;
+   z-index: 1;
+}
+
+header .navbar .logo{
+    font-weight: 700;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+header .navbar .links{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+header .navbar .links a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--text);
+    position: relative;
+}
+
+/*------------------
+    Animation-Nav
+-------------------*/
+
+header .navbar ul li a::before{
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 2.5px;
+    animation: beforeAnimation .5s;
+    display: none;
+    position: absolute;
+    border-radius:20px;
+    bottom: -5px;
+}
+header .navbar ul li a:hover::before{
+    display: unset;
+}
+
+
+@keyframes loadAnimation {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes beforeAnimation {
+    0%{
+        transform: translateX(-100%);
+        width: 0%;
+    }
+    100%{
+        transform: translateX(0%);
+        width: 100%;
+    }
+}
+
+
+/*--------------------
+       Home-Start
+--------------------*/
+
+.home{
+   width: 100%;
+   height: 50vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home-row{
+    text-align: center;    
+}
+
+.home-row h1{
+    font-size: 70px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: var(--text) !important;
+    text-shadow: 2px 2px 8px #094b6586;
+}
+
+.home::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--text), transparent);
+    z-index: 10;
+ }
+
+ /*-------------------------------
+        Services-Product-list
+ --------------------------------*/
+
+ .services{
+    text-align: center;
+     margin: 100px 100px;
+  }
+
+  .services h2{
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .services p{
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .row{
+    margin-top: 5% !important;
+   }
+ 
+   .card-css{
+    transition: 0.5s;
+ }
+ .card-css:hover{
+   transform: scale(1.1);
+}
+
+.card-body{
+  padding: 20px;
+  
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    background: var(--text);
+    box-shadow: 2px 2px 8px #094b65a5;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card-body img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.card-body .img-card{
+    width: 100%;
+    min-height: 250px;
+}
+
+.card-body h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-body .product-link{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body .product-link a{
+    text-decoration: none;
+    font-size: 15px;
+}
+ 
+/*---------------------
+        Discount
+---------------------*/
+
+/*----------------
+  Discount-Open
+----------------*/
+#discount{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.507),rgba( 4,9,30,0.7)), url(img/discount-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .discount{
+    width: 100%;
+    height: 45%;
+    background: transparent;
+    } */
+
+    .discount-col{
+      text-align: center;
+    }
+    .discount-col h2{
+      color: var(--text) !important;
+      font-size: 45px;
+      font-weight: 600;
+    }
+    .discount-col p{
+      color: var(--text) !important;
+      font-size: 20px;
+    }
+
+    .discount-col a{
+      color: var(--white) !important;
+    }
+/*----------------
+  discount-Closs
+----------------*/
+
+
+/*----------------------
+    Contact-open
+----------------------*/
+#Contact{
+  padding: 30px 100px;
+}
+.contact{
+  margin-top: 50px;
+}
+.contact h2{
+  text-align: center;
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: bolder !important;
+  color: var(--text) !important;
+}
+.contact-p{
+  text-align: center;
+}
+
+.contact-link{
+  margin: 20px 0;
+}
+
+
+.btn-reset{
+  background-color: var(--red) !important;
+  transition: 1s !important;
+}
+
+.btn-reset:hover{
+  background-color: var(--text) !important;
+}
+
+.conta-about{
+  margin: 30px 0;
+}
+
+.btn-con:hover{
+  background: #111 !important;
+  transition: 0.5s;
+  color: #FFFFFF !important;
+}
+
+.map-goggle{
+  width: 380px;
+  height: 250px;
+  border: 1px solid #094b65;
+}
+/*--------------------
+     footer-open
+---------------------*/
+
+#footer{
+    width: 100%;
+    height: auto;
+    background-color: #F26522;
+}
+
+.footer-continer{
+    padding:30px 200px;
+}
+
+
+
+.footer-hed-text{
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffffe6 !important;
+    font-family: 'Allerta Stencil', sans-serif;
+    
+ }
+
+ .footer-icon p{
+   font-size: 15px;
+   color: var(--text) !important;
+   font-family: 'Rancho', cursive; 
+ }
+
+ .footer-span{
+    color: #094b65 !important;
+ }
+
+ .footer-icon i{
+    color: var(--text) !important;
+    transition: 1s !important;
+    font-size: 25px;
+    margin: 0 5px;
+ }
+ .footer-icon i:hover{
+  color: var(--new-text) !important;
+}
+
+/*--------*/
+
+.footer-link a{
+    font-size: 20px;
+    line-height: 50px;
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.5s;
+}
+
+.footer-link a:hover{
+  color: #094b65;
+}
+
+.pyemnt-styme{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pyment-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pyment-img img{
+    width: 100%;
+    height: auto;
+}
+
+.lest-footer p{
+     font-weight: bold;
+     color: #2b2a29d9;
+}
